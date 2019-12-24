@@ -4,6 +4,34 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>PNG</string>
+				<string>png</string>
+				<string>JPEG</string>
+				<string>jpeg</string>
+				<string>JPG</string>
+				<string>jpg</string>
+				<string>texture</string>
+				<string>data</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Texture Files</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.jpeg</string>
+				<string>public.png</string>
+				<string>public.heic</string>
+				<string>public.data</string>
+				<string>com.eugenebokhan.MTLTextureViewer.texture</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -17,7 +45,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
@@ -34,50 +62,22 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
-	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>PNG</string>
-				<string>png</string>
-				<string>JPEG</string>
-				<string>jpeg</string>
-				<string>JPG</string>
-				<string>jpg</string>
-				<string>texture</string>
-				<string>data</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>ImageFiles</string>
-			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>public.jpeg</string>
-				<string>public.png</string>
-				<string>public.heic</string>
-				<string>public.data</string>
-				<string>com.eugenebokhan.MTLTextureViewer.texture</string>
-			</array>
-		</dict>
-	</array>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
-			<key>UTTypeIdentifier</key>
-			<string>com.eugenebokhan.MTLTextureViewer.texture</string>
-			<key>UTTypeReferenceURL</key>
-			<string>http://github/eugenebokhan/</string>
-			<key>UTTypeDescription</key>
-			<string>Raw Texture Data</string>
-			<key>UTTypeIconFile</key>
-			<string></string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.item</string>
 				<string>public.data</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>Raw Texture Data</string>
+			<key>UTTypeIconFile</key>
+			<string></string>
+			<key>UTTypeIdentifier</key>
+			<string>com.eugenebokhan.MTLTextureViewer.texture</string>
+			<key>UTTypeReferenceURL</key>
+			<string>https://github.com/s1ddok/Alloy/blob/4fd57d9c9a01f75758e90bb7511b404be19d6e60/Alloy/MTLTextureDescriptor%2BSerialization.swift#L10</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>com.apple.ostype</key>
