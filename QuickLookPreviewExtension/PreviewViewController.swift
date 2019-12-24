@@ -25,6 +25,16 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 
         addChild(viewController)
         view.addSubview(viewController.view)
+        view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "|-[subview]-|",
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+            metrics: nil,
+            views: ["subview": viewController.view]))
+        view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-[subview]-|",
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+            metrics: nil,
+            views: ["subview": viewController.view]))
 
         do {
             try viewController.textureManager.read(from: url)
