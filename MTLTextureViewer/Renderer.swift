@@ -1,13 +1,6 @@
-//
-//  Renderer.swift
-//  MTLTextureViewer
-//
-//  Created by Eugene Bokhan on 21.12.2019.
-//  Copyright © 2019 Eugene Bokhan. All rights reserved.
-//
-
 import Alloy
 import MetalKit
+import SwiftMath
 
 class Renderer {
 
@@ -33,6 +26,7 @@ class Renderer {
     // MARK: - Draw
 
     func draw(texture: MTLTexture,
+              with transform: simd_float4x4 = matrix_identity_float4x4,
               on mtkView: MTKView,
               in commandBuffer: MTLCommandBuffer) {
         guard let drawable = mtkView.currentDrawable,
@@ -40,18 +34,21 @@ class Renderer {
         else { return }
 
         commandBuffer.render(descriptor: renderPassDescriptor) { encoder in
-            encoder.setRenderPipelineState(self.renderPipelineState)
-            encoder.set(fragmentTextures: [texture])
-
             let samplerDescriptor = MTLSamplerDescriptor()
-            samplerDescriptor.minFilter = .linear
-            samplerDescriptor.magFilter = .linear
+            samplerDescriptor.minFilter = .nearest
+            samplerDescriptor.magFilter = .nearest
 
             let sampler = self.renderPipelineState
                               .device
                               .makeSamplerState(descriptor: samplerDescriptor)
+
+            encoder.set(vertexValue: transform,
+            at: 0)
+            encoder.set(fragmentTextures: [texture])
             encoder.setFragmentSamplerState(sampler,
-                                            index: 0)
+            index: 0)
+
+            encoder.setRenderPipelineState(self.renderPipelineState)
 
             encoder.drawPrimitives(type: .triangleStrip,
                                    vertexStart: 0,

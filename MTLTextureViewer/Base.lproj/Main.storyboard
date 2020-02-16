@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,39 +120,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" allowsMagnification="YES" minMagnification="0.001" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVp-SJ-nrj">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="EFU-GY-58l" customClass="MTKView">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                                <clipView key="contentView" drawsBackground="NO" id="SlT-tg-hEj" customClass="CenteringClipView" customModule="MTLTextureViewer" customModuleProvider="target">
-                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-RG-MpI" customClass="MTKView">
-                                            <rect key="frame" x="18" y="-192" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        </customView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="wmd-XH-Vu6">
-                                    <rect key="frame" x="1" y="253" width="478" height="16"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="RDh-ai-DTA">
-                                    <rect key="frame" x="463" y="1" width="16" height="268"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xVp-SJ-nrj" secondAttribute="trailing" id="3Jc-u3-xrT"/>
-                            <constraint firstItem="xVp-SJ-nrj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="KNO-Jn-fTZ"/>
-                            <constraint firstItem="xVp-SJ-nrj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="NGN-RB-2cg"/>
-                            <constraint firstAttribute="bottom" secondItem="xVp-SJ-nrj" secondAttribute="bottom" id="RRl-V1-eCM"/>
+                            <constraint firstItem="EFU-GY-58l" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ACL-ad-H01"/>
+                            <constraint firstAttribute="bottom" secondItem="EFU-GY-58l" secondAttribute="bottom" id="Qaz-OG-jeB"/>
+                            <constraint firstAttribute="trailing" secondItem="EFU-GY-58l" secondAttribute="trailing" id="U0u-3r-guf"/>
+                            <constraint firstItem="EFU-GY-58l" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="XfB-Xc-MnH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mtkView" destination="1hP-RG-MpI" id="Jcd-GP-pj7"/>
-                        <outlet property="scrollView" destination="xVp-SJ-nrj" id="lgx-2m-EHD"/>
+                        <outlet property="mtkView" destination="EFU-GY-58l" id="cSQ-w3-qFs"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

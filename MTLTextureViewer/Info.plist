@@ -28,7 +28,7 @@
 				<string>public.png</string>
 				<string>public.heic</string>
 				<string>public.data</string>
-				<string>com.eugenebokhan.MTLTextureViewer.texture</string>
+				<string>com.eugenebokhan.mtltextureviewer.texture</string>
 			</array>
 		</dict>
 	</array>
@@ -75,7 +75,7 @@
 			<key>UTTypeIconFile</key>
 			<string></string>
 			<key>UTTypeIdentifier</key>
-			<string>com.eugenebokhan.MTLTextureViewer.texture</string>
+			<string>com.eugenebokhan.mtltextureviewer.texture</string>
 			<key>UTTypeReferenceURL</key>
 			<string>https://github.com/s1ddok/Alloy/blob/4fd57d9c9a01f75758e90bb7511b404be19d6e60/Alloy/MTLTextureDescriptor%2BSerialization.swift#L10</string>
 			<key>UTTypeTagSpecification</key>

@@ -7,10 +7,15 @@ install! 'cocoapods', :disable_input_output_paths => true
 use_frameworks!
 inhibit_all_warnings!
 
+def common_pods
+  pod 'Alloy/Shaders'
+  pod 'SwiftMath'
+end
+
 target 'MTLTextureViewer' do
-  pod 'Alloy/Shaders', '~> 0.11.6'
+  common_pods
 end
 
 target 'QuickLookPreviewExtension' do
-  pod 'Alloy/Shaders', '~> 0.11.6'
+  common_pods
 end
