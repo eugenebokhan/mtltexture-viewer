@@ -29,6 +29,7 @@
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<string>com.eugenebokhan.mtltextureviewer.texture</string>
+				<string>com.eugenebokhan.mtltextureviewer.compressedTexture</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<false/>

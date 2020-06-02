@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         do {
             try viewController.textureManager.read(from: url)
-            try viewController.drawTexture()
+            viewController.drawTexture()
         }
         catch { displayAlert(message: "File read failed, error: \(error)") }
 

@@ -19,6 +19,8 @@
 		187162B723B102B400DBB54E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCD23AE12AA00365265 /* Renderer.swift */; };
 		187162B823B102B400DBB54E /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
 		187162B923B102BD00DBB54E /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A331123AFC5200091E7F8 /* CenteringClipView.swift */; };
+		189C25A02486E43D00C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
+		189C25A12486E5E600C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		18AF004923AF80FE0013AFF1 /* BlurredWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */; };
 		18AF004B23AF811E0013AFF1 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004A23AF811E0013AFF1 /* BlurredView.swift */; };
 		18B027B223B1BCF900A9D7AD /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
@@ -75,6 +77,7 @@
 		187162AC23B1025600DBB54E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreviewViewController.xib; sourceTree = "<group>"; };
 		187162AE23B1025600DBB54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187162AF23B1025600DBB54E /* QuickLookPreviewExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickLookPreviewExtension.entitlements; sourceTree = "<group>"; };
+		189C259F2486E43D00C141A3 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
 		18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredWindow.swift; sourceTree = "<group>"; };
 		18AF004A23AF811E0013AFF1 /* BlurredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredView.swift; sourceTree = "<group>"; };
 		18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLTextureManager.swift; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 				18C78BB723AD628A00365265 /* AppDelegate.swift */,
 				18C78BB923AD628A00365265 /* ViewController.swift */,
 				18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */,
+				189C259F2486E43D00C141A3 /* Data+Compression.swift */,
 				18C78BCD23AE12AA00365265 /* Renderer.swift */,
 				18B027B823B1C9D100A9D7AD /* Utils.swift */,
 				181A331A23AFDA9F0091E7F8 /* UI */,
@@ -408,6 +412,7 @@
 				18B027BA23B1C9D100A9D7AD /* Utils.swift in Sources */,
 				187162AA23B1025600DBB54E /* PreviewViewController.swift in Sources */,
 				187162B723B102B400DBB54E /* Renderer.swift in Sources */,
+				189C25A12486E5E600C141A3 /* Data+Compression.swift in Sources */,
 				18B027B523B1BF5000A9D7AD /* BlurredWindow.swift in Sources */,
 				187162B823B102B400DBB54E /* NSImage+Extensions.swift in Sources */,
 			);
@@ -421,6 +426,7 @@
 				18C78BCE23AE12AA00365265 /* Renderer.swift in Sources */,
 				181A331523AFD2F90091E7F8 /* AccessoryViewController.swift in Sources */,
 				18C78BBA23AD628A00365265 /* ViewController.swift in Sources */,
+				189C25A02486E43D00C141A3 /* Data+Compression.swift in Sources */,
 				18C78BCC23AD74EC00365265 /* NSImage+Extensions.swift in Sources */,
 				181A331223AFC5200091E7F8 /* CenteringClipView.swift in Sources */,
 				18C78BB823AD628A00365265 /* AppDelegate.swift in Sources */,

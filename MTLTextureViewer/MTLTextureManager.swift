@@ -14,11 +14,13 @@ class MTLTextureManager {
 
     enum ExportType: String, CaseIterable {
         case texture
+        case compressedTexture
         case png, PNG
     }
 
     enum ImportType: String, CaseIterable {
         case texture
+        case compressedTexture
         case png, PNG, jpg, JPG, heic, HEIC
     }
 
@@ -46,14 +48,18 @@ class MTLTextureManager {
         else { throw Error.brokenURL }
 
         switch type {
-        case .texture:
-            self.texture = try self.jsonDecoder.decode(MTLTextureCodableBox.self,
-                                                       from: Data(contentsOf: url))
-                                               .texture(device: context.device)
+        case .texture, .compressedTexture:
+            var textureData = try Data(contentsOf: url)
+            if type == .compressedTexture { textureData = try textureData.decompressed() }
+            self.texture = try self.jsonDecoder
+                                   .decode(MTLTextureCodableBox.self,
+                                           from: textureData)
+                                   .texture(device: self.context.device)
         case .jpg, .JPG, .png, .PNG, .heic, .HEIC:
             guard let cgImage = NSImage(contentsOf: url)?.cgImage
             else { throw Error.cgImageCreationFailed }
             self.texture = try self.context.texture(from: cgImage)
+
         }
     }
 
@@ -64,9 +70,10 @@ class MTLTextureManager {
         else { throw Error.textureDataIsMissing }
 
         switch type {
-        case .texture:
-            try self.jsonEncoder.encode(texture.codable())
-                                .write(to: url)
+        case .texture, .compressedTexture:
+            var textureData = try self.jsonEncoder.encode(texture.codable())
+            if type == .compressedTexture { textureData = textureData.compressed() }
+            try textureData.write(to: url)
         case .png, .PNG:
             guard let cgImage = texture.cgImage,
                   let pngData = NSImage(cgImage: cgImage).pngData
