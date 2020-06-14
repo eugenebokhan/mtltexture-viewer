@@ -32,7 +32,7 @@
 				<string>com.eugenebokhan.mtltextureviewer.compressedTexture</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.quicklook.preview</string>
@@ -40,6 +40,6 @@
 		<string>$(PRODUCT_MODULE_NAME).PreviewViewController</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 Eugene Bokhan. All rights reserved.</string>
+	<string>Copyright © 2020 Eugene Bokhan. All rights reserved.</string>
 </dict>
 </plist>
