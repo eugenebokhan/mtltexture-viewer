@@ -28,11 +28,9 @@ class PreviewViewController: NSViewController, QLPreviewingController {
         viewController.view.frame = .init(origin: .zero,
                                           size: self.view.bounds.size)
 
-        do {
-            try viewController.textureManager.read(from: url)
-            try viewController.drawTexture()
-        }
+        do { try viewController.textureManager.read(from: url) }
         catch { displayAlert(message: "File read failed, error: \(error)") }
+        viewController.drawTexture()
 
         handler(nil)
     }

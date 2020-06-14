@@ -75,7 +75,7 @@ class MTLTextureManager {
             if type == .compressedTexture { textureData = textureData.compressed() }
             try textureData.write(to: url)
         case .png, .PNG:
-            guard let cgImage = texture.cgImage,
+            guard let cgImage = try? texture.cgImage(),
                   let pngData = NSImage(cgImage: cgImage).pngData
             else { throw Error.cgImageCreationFailed }
             try pngData.write(to: url)

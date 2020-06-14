@@ -11,16 +11,13 @@ class Renderer {
     // MARK: - Init
 
     public init(context: MTLContext) throws {
-        guard let library = context.shaderLibrary(for: Self.self)
-        else { throw MetalError.MTLDeviceError.libraryCreationFailed }
-
+        let library = try context.library(for: Self.self)
         let renderStateDescriptor = MTLRenderPipelineDescriptor()
         renderStateDescriptor.vertexFunction = library.makeFunction(name: Self.vertexFuntionName)
         renderStateDescriptor.fragmentFunction = library.makeFunction(name: Self.fragmentFuntionName)
         renderStateDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
         renderStateDescriptor.colorAttachments[0].isBlendingEnabled = false
-        self.renderPipelineState = try context.device
-                                              .makeRenderPipelineState(descriptor: renderStateDescriptor)
+        self.renderPipelineState = try context.device.makeRenderPipelineState(descriptor: renderStateDescriptor)
     }
 
     // MARK: - Draw

@@ -80,7 +80,7 @@ class ViewController: NSViewController {
     // MARK: - Setup
 
     func setup() throws {
-        self.context = .init()
+        self.context = try .init()
 
         Renderer.configure(self.mtkView,
                            with: self.context.device)

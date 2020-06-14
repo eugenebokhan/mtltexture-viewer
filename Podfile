@@ -8,7 +8,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 def common_pods
-  pod 'Alloy/Shaders'
+  pod 'Alloy/Shaders', '0.14.2'
   pod 'SwiftMath'
 end
 
@@ -17,5 +17,9 @@ target 'MTLTextureViewer' do
 end
 
 target 'QuickLookPreviewExtension' do
+  common_pods
+end
+  
+target 'ThumbnailExtension' do
   common_pods
 end
