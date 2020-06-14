@@ -4,9 +4,7 @@
 
 ⚠️ Currently this project is in early alfa stage and it's a subject for improvements.
 
-<p align="left">
-    <img src="Media/preview.png", width="800">
-</p>
+![preview](Media/preview.png)
 
 ## Key Features
 
