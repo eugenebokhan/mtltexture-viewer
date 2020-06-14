@@ -1,11 +1,3 @@
-//
-//  Utils.swift
-//  MTLTextureViewer
-//
-//  Created by Eugene Bokhan on 24.12.2019.
-//  Copyright © 2019 Eugene Bokhan. All rights reserved.
-//
-
 import Cocoa
 
 func displayAlert(title: String = "Error",

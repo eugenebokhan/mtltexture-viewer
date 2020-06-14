@@ -1,11 +1,3 @@
-//
-//  AccessoryViewController.swift
-//  MTLTextureViewer
-//
-//  Created by Eugene Bokhan on 22.12.2019.
-//  Copyright © 2019 Eugene Bokhan. All rights reserved.
-//
-
 import Cocoa
 
 class AccessoryViewController: NSViewController {

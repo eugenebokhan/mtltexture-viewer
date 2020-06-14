@@ -26,6 +26,9 @@
 		1893279E24962A9C00D86068 /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
 		189327A024962BD500D86068 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		189327A124962BE400D86068 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
+		189327A5249647E800D86068 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189327A4249647E800D86068 /* URL+Extensions.swift */; };
+		189327A6249647E800D86068 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189327A4249647E800D86068 /* URL+Extensions.swift */; };
+		189327A7249647E800D86068 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189327A4249647E800D86068 /* URL+Extensions.swift */; };
 		189C25A02486E43D00C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		189C25A12486E5E600C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		18AF004923AF80FE0013AFF1 /* BlurredWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */; };
@@ -99,6 +102,7 @@
 		18932794249628B000D86068 /* ThumbnailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
 		18932796249628B000D86068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18932797249628B000D86068 /* ThumbnailExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThumbnailExtension.entitlements; sourceTree = "<group>"; };
+		189327A4249647E800D86068 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		189C259F2486E43D00C141A3 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
 		18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredWindow.swift; sourceTree = "<group>"; };
 		18AF004A23AF811E0013AFF1 /* BlurredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredView.swift; sourceTree = "<group>"; };
@@ -232,8 +236,17 @@
 			isa = PBXGroup;
 			children = (
 				189C259F2486E43D00C141A3 /* Data+Compression.swift */,
+				189327A4249647E800D86068 /* URL+Extensions.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		189327A82496480800D86068 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				18C78BCF23AE22FA00365265 /* Shaders.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 		18C78BAB23AD628A00365265 = {
@@ -268,7 +281,7 @@
 				18B027B823B1C9D100A9D7AD /* Utils.swift */,
 				181A331A23AFDA9F0091E7F8 /* UI */,
 				181A331723AFDA830091E7F8 /* Extensions */,
-				18C78BCF23AE22FA00365265 /* Shaders.metal */,
+				189327A82496480800D86068 /* Shaders */,
 				18C78BBB23AD628C00365265 /* Assets.xcassets */,
 				18C78BBD23AD628C00365265 /* Main.storyboard */,
 				18C78BC023AD628C00365265 /* Info.plist */,
@@ -515,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181B939223B1186900D1C764 /* ViewController.swift in Sources */,
+				189327A6249647E800D86068 /* URL+Extensions.swift in Sources */,
 				18B027B423B1BEDD00A9D7AD /* Shaders.metal in Sources */,
 				18B027B623B1BF5300A9D7AD /* BlurredView.swift in Sources */,
 				18B027B323B1BE0800A9D7AD /* MTLTextureManager.swift in Sources */,
@@ -534,6 +548,7 @@
 			files = (
 				18932795249628B000D86068 /* ThumbnailProvider.swift in Sources */,
 				189327A024962BD500D86068 /* Data+Compression.swift in Sources */,
+				189327A7249647E800D86068 /* URL+Extensions.swift in Sources */,
 				189327A124962BE400D86068 /* NSImage+Extensions.swift in Sources */,
 				1893279E24962A9C00D86068 /* MTLTextureManager.swift in Sources */,
 			);
@@ -547,6 +562,7 @@
 				18C78BCE23AE12AA00365265 /* Renderer.swift in Sources */,
 				181A331523AFD2F90091E7F8 /* AccessoryViewController.swift in Sources */,
 				18C78BBA23AD628A00365265 /* ViewController.swift in Sources */,
+				189327A5249647E800D86068 /* URL+Extensions.swift in Sources */,
 				189C25A02486E43D00C141A3 /* Data+Compression.swift in Sources */,
 				18C78BCC23AD74EC00365265 /* NSImage+Extensions.swift in Sources */,
 				181A331223AFC5200091E7F8 /* CenteringClipView.swift in Sources */,

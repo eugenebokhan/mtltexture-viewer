@@ -1,11 +1,3 @@
-//
-//  MTLTextureManager.swift
-//  MTLTextureViewer
-//
-//  Created by Eugene Bokhan on 24.12.2019.
-//  Copyright © 2019 Eugene Bokhan. All rights reserved.
-//
-
 import Alloy
 
 class MTLTextureManager {
@@ -80,18 +72,6 @@ class MTLTextureManager {
             else { throw Error.cgImageCreationFailed }
             try pngData.write(to: url)
         }
-    }
-
-}
-
-extension URL {
-
-    var importType: MTLTextureManager.ImportType? {
-        return MTLTextureManager.ImportType(rawValue: self.pathExtension)
-    }
-
-    var exportType: MTLTextureManager.ExportType? {
-        return MTLTextureManager.ExportType(rawValue: self.pathExtension)
     }
 
 }
