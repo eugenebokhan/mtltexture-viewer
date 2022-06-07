@@ -1,15 +1,6 @@
-//
-//  PreviewViewController.swift
-//  QuickLookPreviewExtension
-//
-//  Created by Eugene Bokhan on 23.12.2019.
-//  Copyright © 2019 Eugene Bokhan. All rights reserved.
-//
-
 import Cocoa
 import Quartz
-import Alloy
-import MetalKit
+import MetalTools
 
 class PreviewViewController: NSViewController, QLPreviewingController {
 

@@ -1,5 +1,5 @@
 import QuickLookThumbnailing
-import Alloy
+import MetalTools
 import MetalPerformanceShaders
 
 class ThumbnailProvider: QLThumbnailProvider {

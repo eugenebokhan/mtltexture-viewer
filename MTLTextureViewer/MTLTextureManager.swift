@@ -1,4 +1,4 @@
-import Alloy
+import MetalTools
 
 class MTLTextureManager {
 
@@ -44,7 +44,7 @@ class MTLTextureManager {
             var textureData = try Data(contentsOf: url)
             if type == .compressedTexture { textureData = try textureData.decompressed() }
             self.texture = try self.jsonDecoder
-                                   .decode(MTLTextureCodableBox.self,
+                                   .decode(MTLTextureCodableContainer.self,
                                            from: textureData)
                                    .texture(device: self.context.device)
         case .jpg, .JPG, .png, .PNG, .heic, .HEIC:

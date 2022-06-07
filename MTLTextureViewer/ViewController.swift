@@ -1,6 +1,5 @@
 import Cocoa
-import Alloy
-import MetalKit
+import MetalTools
 import SwiftMath
 
 class ViewController: NSViewController {

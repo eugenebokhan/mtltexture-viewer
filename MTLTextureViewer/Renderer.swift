@@ -1,5 +1,4 @@
-import Alloy
-import MetalKit
+import MetalTools
 import SwiftMath
 
 class Renderer {
@@ -39,11 +38,9 @@ class Renderer {
                               .device
                               .makeSamplerState(descriptor: samplerDescriptor)
 
-            encoder.set(vertexValue: transform,
-            at: 0)
-            encoder.set(fragmentTextures: [texture])
-            encoder.setFragmentSamplerState(sampler,
-            index: 0)
+            encoder.setVertexValue(transform, at: 0)
+            encoder.setFragmentTextures([texture])
+            encoder.setFragmentSamplerState(sampler, index: 0)
 
             encoder.setRenderPipelineState(self.renderPipelineState)
 

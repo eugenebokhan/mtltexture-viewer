@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,14 +15,14 @@
 		187162A723B1025600DBB54E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A332523B0E0240091E7F8 /* Quartz.framework */; };
 		187162AA23B1025600DBB54E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187162A923B1025600DBB54E /* PreviewViewController.swift */; };
 		187162AD23B1025600DBB54E /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187162AB23B1025600DBB54E /* PreviewViewController.xib */; };
-		187162B223B1025600DBB54E /* QuickLookPreviewExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 187162A623B1025600DBB54E /* QuickLookPreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		187162B223B1025600DBB54E /* QuickLookPreviewExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 187162A623B1025600DBB54E /* QuickLookPreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		187162B723B102B400DBB54E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCD23AE12AA00365265 /* Renderer.swift */; };
 		187162B823B102B400DBB54E /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
 		187162B923B102BD00DBB54E /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A331123AFC5200091E7F8 /* CenteringClipView.swift */; };
 		18932791249628B000D86068 /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18932790249628B000D86068 /* QuickLookThumbnailing.framework */; };
 		18932792249628B000D86068 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A332523B0E0240091E7F8 /* Quartz.framework */; };
 		18932795249628B000D86068 /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932794249628B000D86068 /* ThumbnailProvider.swift */; };
-		1893279A249628B000D86068 /* ThumbnailExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1893278F249628B000D86068 /* ThumbnailExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1893279A249628B000D86068 /* ThumbnailExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1893278F249628B000D86068 /* ThumbnailExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1893279E24962A9C00D86068 /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
 		189327A024962BD500D86068 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		189327A124962BE400D86068 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
@@ -33,6 +33,11 @@
 		189C25A12486E5E600C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		18AF004923AF80FE0013AFF1 /* BlurredWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */; };
 		18AF004B23AF811E0013AFF1 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004A23AF811E0013AFF1 /* BlurredView.swift */; };
+		18B020F02850021D00F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020EF2850021D00F22E0F /* MetalTools */; };
+		18B020F32850023500F22E0F /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F22850023500F22E0F /* SwiftMath */; };
+		18B020F52850026800F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F42850026800F22E0F /* MetalTools */; };
+		18B020F7285002B700F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F6285002B700F22E0F /* MetalTools */; };
+		18B020F92850034200F22E0F /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F82850034200F22E0F /* SwiftMath */; };
 		18B027B223B1BCF900A9D7AD /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
 		18B027B323B1BE0800A9D7AD /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
 		18B027B423B1BEDD00A9D7AD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCF23AE22FA00365265 /* Shaders.metal */; };
@@ -47,9 +52,6 @@
 		18C78BCC23AD74EC00365265 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
 		18C78BCE23AE12AA00365265 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCD23AE12AA00365265 /* Renderer.swift */; };
 		18C78BD023AE22FA00365265 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCF23AE22FA00365265 /* Shaders.metal */; };
-		6032C09ADBC09302D4DAE0EC /* Pods_ThumbnailExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224750C16E551DC36455CE1B /* Pods_ThumbnailExtension.framework */; };
-		9267A4FA11D74273FAC179DF /* Pods_QuickLookPreviewExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179E71F6362F9B7FE9E175D9 /* Pods_QuickLookPreviewExtension.framework */; };
-		A555684495A5C72AFFC82597 /* Pods_MTLTextureViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C31610CE0F303452ADB40E /* Pods_MTLTextureViewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,27 +72,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		181A333223B0E0240091E7F8 /* Embed App Extensions */ = {
+		181A333223B0E0240091E7F8 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				187162B223B1025600DBB54E /* QuickLookPreviewExtension.appex in Embed App Extensions */,
-				1893279A249628B000D86068 /* ThumbnailExtension.appex in Embed App Extensions */,
+				187162B223B1025600DBB54E /* QuickLookPreviewExtension.appex in Embed Foundation Extensions */,
+				1893279A249628B000D86068 /* ThumbnailExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		179E71F6362F9B7FE9E175D9 /* Pods_QuickLookPreviewExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickLookPreviewExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A331123AFC5200091E7F8 /* CenteringClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteringClipView.swift; sourceTree = "<group>"; };
 		181A331323AFD2F90091E7F8 /* AccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
 		181A331423AFD2F90091E7F8 /* AccessoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryViewController.xib; sourceTree = "<group>"; };
 		181A332523B0E0240091E7F8 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		183E76287206BCDD6C5A8790 /* Pods-ThumbnailExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbnailExtension.debug.xcconfig"; path = "Target Support Files/Pods-ThumbnailExtension/Pods-ThumbnailExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		184180BA23AE797A0098767C /* MTLTextureViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTLTextureViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		187162A623B1025600DBB54E /* QuickLookPreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickLookPreviewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		187162A923B1025600DBB54E /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -118,16 +118,6 @@
 		18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
 		18C78BCD23AE12AA00365265 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		18C78BCF23AE22FA00365265 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		224750C16E551DC36455CE1B /* Pods_ThumbnailExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbnailExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2250BF054E2D9B648DD80B83 /* Pods-MTLTextureViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLTextureViewer.debug.xcconfig"; path = "Target Support Files/Pods-MTLTextureViewer/Pods-MTLTextureViewer.debug.xcconfig"; sourceTree = "<group>"; };
-		4F1986675B1CA8311FD2ADED /* Pods-ThumbnailExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbnailExtension.release.xcconfig"; path = "Target Support Files/Pods-ThumbnailExtension/Pods-ThumbnailExtension.release.xcconfig"; sourceTree = "<group>"; };
-		508A2F30F8AAE85ADBFD8471 /* Pods-QuickLookPreviewExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickLookPreviewExtension.debug.xcconfig"; path = "Target Support Files/Pods-QuickLookPreviewExtension/Pods-QuickLookPreviewExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		51C31610CE0F303452ADB40E /* Pods_MTLTextureViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTLTextureViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A08B7BBEBF02886E5C65BB7 /* Pods_MTLTextureViewerQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTLTextureViewerQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A314F22F6685DEBAF696E065 /* Pods-MTLTextureViewerQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLTextureViewerQL.debug.xcconfig"; path = "Target Support Files/Pods-MTLTextureViewerQL/Pods-MTLTextureViewerQL.debug.xcconfig"; sourceTree = "<group>"; };
-		F2E5CB5E48E8DFD1AE170CE6 /* Pods-MTLTextureViewerQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLTextureViewerQL.release.xcconfig"; path = "Target Support Files/Pods-MTLTextureViewerQL/Pods-MTLTextureViewerQL.release.xcconfig"; sourceTree = "<group>"; };
-		F508C8880B65FB7F818F3CD4 /* Pods-MTLTextureViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLTextureViewer.release.xcconfig"; path = "Target Support Files/Pods-MTLTextureViewer/Pods-MTLTextureViewer.release.xcconfig"; sourceTree = "<group>"; };
-		F6B8B26F0B6568A027A09471 /* Pods-QuickLookPreviewExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickLookPreviewExtension.release.xcconfig"; path = "Target Support Files/Pods-QuickLookPreviewExtension/Pods-QuickLookPreviewExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B020F7285002B700F22E0F /* MetalTools in Frameworks */,
 				187162A723B1025600DBB54E /* Quartz.framework in Frameworks */,
-				9267A4FA11D74273FAC179DF /* Pods_QuickLookPreviewExtension.framework in Frameworks */,
+				18B020F92850034200F22E0F /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18932791249628B000D86068 /* QuickLookThumbnailing.framework in Frameworks */,
+				18B020F52850026800F22E0F /* MetalTools in Frameworks */,
 				18932792249628B000D86068 /* Quartz.framework in Frameworks */,
-				6032C09ADBC09302D4DAE0EC /* Pods_ThumbnailExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A555684495A5C72AFFC82597 /* Pods_MTLTextureViewer.framework in Frameworks */,
+				18B020F32850023500F22E0F /* SwiftMath in Frameworks */,
+				18B020F02850021D00F22E0F /* MetalTools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				181A332523B0E0240091E7F8 /* Quartz.framework */,
-				51C31610CE0F303452ADB40E /* Pods_MTLTextureViewer.framework */,
-				5A08B7BBEBF02886E5C65BB7 /* Pods_MTLTextureViewerQL.framework */,
-				179E71F6362F9B7FE9E175D9 /* Pods_QuickLookPreviewExtension.framework */,
 				18932790249628B000D86068 /* QuickLookThumbnailing.framework */,
-				224750C16E551DC36455CE1B /* Pods_ThumbnailExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,7 +244,6 @@
 				187162A823B1025600DBB54E /* QuickLookPreviewExtension */,
 				18932793249628B000D86068 /* ThumbnailExtension */,
 				18C78BB523AD628A00365265 /* Products */,
-				AD2D017AD58E42F41C99A7F4 /* Pods */,
 				093480B6B80AC30DACB0F7FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -291,21 +278,6 @@
 			path = MTLTextureViewer;
 			sourceTree = "<group>";
 		};
-		AD2D017AD58E42F41C99A7F4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2250BF054E2D9B648DD80B83 /* Pods-MTLTextureViewer.debug.xcconfig */,
-				F508C8880B65FB7F818F3CD4 /* Pods-MTLTextureViewer.release.xcconfig */,
-				A314F22F6685DEBAF696E065 /* Pods-MTLTextureViewerQL.debug.xcconfig */,
-				F2E5CB5E48E8DFD1AE170CE6 /* Pods-MTLTextureViewerQL.release.xcconfig */,
-				508A2F30F8AAE85ADBFD8471 /* Pods-QuickLookPreviewExtension.debug.xcconfig */,
-				F6B8B26F0B6568A027A09471 /* Pods-QuickLookPreviewExtension.release.xcconfig */,
-				183E76287206BCDD6C5A8790 /* Pods-ThumbnailExtension.debug.xcconfig */,
-				4F1986675B1CA8311FD2ADED /* Pods-ThumbnailExtension.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,7 +285,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187162B523B1025600DBB54E /* Build configuration list for PBXNativeTarget "QuickLookPreviewExtension" */;
 			buildPhases = (
-				785D3E152948069FBB037A2C /* [CP] Check Pods Manifest.lock */,
 				187162A223B1025600DBB54E /* Sources */,
 				187162A323B1025600DBB54E /* Frameworks */,
 				187162A423B1025600DBB54E /* Resources */,
@@ -323,6 +294,10 @@
 			dependencies = (
 			);
 			name = QuickLookPreviewExtension;
+			packageProductDependencies = (
+				18B020F6285002B700F22E0F /* MetalTools */,
+				18B020F82850034200F22E0F /* SwiftMath */,
+			);
 			productName = QuickLookPreviewExtension;
 			productReference = 187162A623B1025600DBB54E /* QuickLookPreviewExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -331,7 +306,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1893279D249628B000D86068 /* Build configuration list for PBXNativeTarget "ThumbnailExtension" */;
 			buildPhases = (
-				5A5834C04FA0A8879A5968C0 /* [CP] Check Pods Manifest.lock */,
 				1893278B249628B000D86068 /* Sources */,
 				1893278C249628B000D86068 /* Frameworks */,
 				1893278D249628B000D86068 /* Resources */,
@@ -341,6 +315,9 @@
 			dependencies = (
 			);
 			name = ThumbnailExtension;
+			packageProductDependencies = (
+				18B020F42850026800F22E0F /* MetalTools */,
+			);
 			productName = ThumbnailExtension;
 			productReference = 1893278F249628B000D86068 /* ThumbnailExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -349,12 +326,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18C78BC423AD628C00365265 /* Build configuration list for PBXNativeTarget "MTLTextureViewer" */;
 			buildPhases = (
-				F0DC36F5423DD4F8F94908F4 /* [CP] Check Pods Manifest.lock */,
 				18C78BB023AD628A00365265 /* Sources */,
 				18C78BB123AD628A00365265 /* Frameworks */,
 				18C78BB223AD628A00365265 /* Resources */,
-				181A333223B0E0240091E7F8 /* Embed App Extensions */,
-				3C9F3ED34B5C970CFCA41AC9 /* [CP] Embed Pods Frameworks */,
+				181A333223B0E0240091E7F8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -363,6 +338,10 @@
 				18932799249628B000D86068 /* PBXTargetDependency */,
 			);
 			name = MTLTextureViewer;
+			packageProductDependencies = (
+				18B020EF2850021D00F22E0F /* MetalTools */,
+				18B020F22850023500F22E0F /* SwiftMath */,
+			);
 			productName = MTLTextureViewer;
 			productReference = 18C78BB423AD628A00365265 /* MTLTextureViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -374,7 +353,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Eugene Bokhan";
 				TargetAttributes = {
 					187162A523B1025600DBB54E = {
@@ -398,6 +377,10 @@
 				Base,
 			);
 			mainGroup = 18C78BAB23AD628A00365265;
+			packageReferences = (
+				18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */,
+				18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */,
+			);
 			productRefGroup = 18C78BB523AD628A00365265 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -437,90 +420,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3C9F3ED34B5C970CFCA41AC9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MTLTextureViewer/Pods-MTLTextureViewer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A5834C04FA0A8879A5968C0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ThumbnailExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		785D3E152948069FBB037A2C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QuickLookPreviewExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0DC36F5423DD4F8F94908F4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MTLTextureViewer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		187162A223B1025600DBB54E /* Sources */ = {
@@ -611,11 +510,11 @@
 /* Begin XCBuildConfiguration section */
 		187162B323B1025600DBB54E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 508A2F30F8AAE85ADBFD8471 /* Pods-QuickLookPreviewExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickLookPreviewExtension/QuickLookPreviewExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = QuickLookPreviewExtension/Info.plist;
@@ -634,11 +533,11 @@
 		};
 		187162B423B1025600DBB54E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6B8B26F0B6568A027A09471 /* Pods-QuickLookPreviewExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickLookPreviewExtension/QuickLookPreviewExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = QuickLookPreviewExtension/Info.plist;
@@ -657,11 +556,11 @@
 		};
 		1893279B249628B000D86068 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 183E76287206BCDD6C5A8790 /* Pods-ThumbnailExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ThumbnailExtension/ThumbnailExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThumbnailExtension/Info.plist;
@@ -681,11 +580,11 @@
 		};
 		1893279C249628B000D86068 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F1986675B1CA8311FD2ADED /* Pods-ThumbnailExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ThumbnailExtension/ThumbnailExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThumbnailExtension/Info.plist;
@@ -729,6 +628,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -736,6 +636,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -789,6 +690,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -796,6 +698,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -818,7 +721,6 @@
 		};
 		18C78BC523AD628C00365265 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2250BF054E2D9B648DD80B83 /* Pods-MTLTextureViewer.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -827,6 +729,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MTLTextureViewer/Info.plist;
@@ -846,7 +749,6 @@
 		};
 		18C78BC623AD628C00365265 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F508C8880B65FB7F818F3CD4 /* Pods-MTLTextureViewer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -855,6 +757,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 63TG84TE66;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MTLTextureViewer/Info.plist;
@@ -911,6 +814,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:eugenebokhan/metal-tools.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.6;
+			};
+		};
+		18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftgfx/swiftmath.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18B020EF2850021D00F22E0F /* MetalTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
+			productName = MetalTools;
+		};
+		18B020F22850023500F22E0F /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */;
+			productName = SwiftMath;
+		};
+		18B020F42850026800F22E0F /* MetalTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
+			productName = MetalTools;
+		};
+		18B020F6285002B700F22E0F /* MetalTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
+			productName = MetalTools;
+		};
+		18B020F82850034200F22E0F /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */;
+			productName = SwiftMath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18C78BAC23AD628A00365265 /* Project object */;
 }

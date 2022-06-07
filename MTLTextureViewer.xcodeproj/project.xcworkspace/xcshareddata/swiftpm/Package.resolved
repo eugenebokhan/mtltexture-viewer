@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "metal-tools",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:eugenebokhan/metal-tools.git",
+      "state" : {
+        "revision" : "ce454012814b3230beec7593b5dde1914adc22b4",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swiftmath",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftgfx/swiftmath.git",
+      "state" : {
+        "revision" : "13a224a655cbef1ef0e39d7d22e31a4ff6bc9937",
+        "version" : "3.3.1"
+      }
+    }
+  ],
+  "version" : 2
+}
