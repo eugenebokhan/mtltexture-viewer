@@ -1,8 +1,38 @@
 import Cocoa
 import MetalTools
 import SwiftMath
+import CoreVideoTools
 
 class ViewController: NSViewController {
+    
+    struct Configuration: CustomStringConvertible {
+        let layerColorSpace: CGColorSpace
+        let layerPixelFormat: MTLPixelFormat
+        let textureColorSpace: MTLTextureManager.ColorSpace
+        
+        var description: String {
+            let layerColorSpaceName: String
+            switch self.layerColorSpace {
+            case CGColorSpaceCreateDeviceRGB(): layerColorSpaceName = "CGColorSpaceCreateDeviceRGB()"
+            case CGColorSpace(name: CGColorSpace.sRGB)!: layerColorSpaceName = "CGColorSpace(name: CGColorSpace.sRGB)"
+            default: layerColorSpaceName = "unknown"
+            }
+            
+            let layerPixelFormatName: String
+            switch self.layerPixelFormat {
+            case .bgra8Unorm: layerPixelFormatName = ".bgra8Unorm"
+            case .bgra8Unorm_srgb: layerPixelFormatName = ".bgra8Unorm_srgb"
+            default: layerPixelFormatName = "unknown"
+            }
+            
+            
+            return """
+                layerColorSpace: \(layerColorSpaceName),
+                layerPixelFormat: \(layerPixelFormatName),
+                textureColorSpace: \(self.textureColorSpace.rawValue)
+            """
+        }
+    }
 
     // MARK: - IB
 
@@ -22,8 +52,13 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        do { try self.setup() }
-        catch { displayAlert(message: "ViewController setup failed, error: \(error)") }
+        do {
+            try self.setup(configuration: .init(
+                layerColorSpace: CGColorSpace(name: CGColorSpace.sRGB)!,
+                layerPixelFormat: .bgra8Unorm_srgb,
+                textureColorSpace: .srgb
+            ))
+        } catch { displayAlert(message: "ViewController setup failed, error: \(error)") }
     }
 
     override public func viewDidLayout() {
@@ -70,14 +105,16 @@ class ViewController: NSViewController {
 
     // MARK: - Setup
 
-    func setup() throws {
+    func setup(configuration: Configuration) throws {
         self.context = try .init()
-
-        Renderer.configure(self.mtkView,
-                           with: self.context.device)
-
-        self.renderer = try .init(context: self.context)
-        self.textureManager = .init(context: self.context)
+        Renderer.configure(mtkView: self.mtkView,
+                           device: self.context.device,
+                           colorspace: configuration.layerColorSpace,
+                           pixelFormat: configuration.layerPixelFormat)
+        self.textureManager = .init(context: self.context, colorSpace: configuration.textureColorSpace)
+        self.renderer = try .init(context: self.context, pixelFormat: configuration.layerPixelFormat)
+        
+        print(configuration.description)
     }
 
     // MARK: - Draw

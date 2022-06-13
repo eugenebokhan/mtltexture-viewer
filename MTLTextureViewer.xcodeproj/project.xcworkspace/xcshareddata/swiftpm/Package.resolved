@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "core-video-tools",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eugenebokhan/core-video-tools.git",
+      "state" : {
+        "revision" : "6028c5ec92a0611e205b3702c6dc0fbd120a26f4",
+        "version" : "0.0.5"
+      }
+    },
+    {
       "identity" : "metal-tools",
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:eugenebokhan/metal-tools.git",
       "state" : {
-        "revision" : "ce454012814b3230beec7593b5dde1914adc22b4",
-        "version" : "1.0.6"
+        "revision" : "4f965e4fd3da0b79ceca9ce07b0da501bba1fa78",
+        "version" : "1.0.8"
       }
     },
     {

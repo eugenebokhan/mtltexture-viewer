@@ -4,7 +4,7 @@ import MetalPerformanceShaders
 
 class ThumbnailProvider: QLThumbnailProvider {
     
-    let textureManager = try! MTLTextureManager(context: .init())
+    let textureManager = try! MTLTextureManager(context: .init(), colorSpace: .rgb)
     
     override func provideThumbnail(for request: QLFileThumbnailRequest,
                                    _ handler: @escaping (QLThumbnailReply?, Error?) -> Void) {
