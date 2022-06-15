@@ -12,10 +12,10 @@
     {
       "identity" : "metal-tools",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:eugenebokhan/metal-tools.git",
+      "location" : "https://github.com/eugenebokhan/metal-tools.git",
       "state" : {
-        "revision" : "4f965e4fd3da0b79ceca9ce07b0da501bba1fa78",
-        "version" : "1.0.8"
+        "revision" : "b7a53f2c169217a7207059071d64db23521de6ea",
+        "version" : "1.0.10"
       }
     },
     {

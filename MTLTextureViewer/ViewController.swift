@@ -5,33 +5,10 @@ import CoreVideoTools
 
 class ViewController: NSViewController {
     
-    struct Configuration: CustomStringConvertible {
+    struct Configuration {
         let layerColorSpace: CGColorSpace
         let layerPixelFormat: MTLPixelFormat
         let textureColorSpace: MTLTextureManager.ColorSpace
-        
-        var description: String {
-            let layerColorSpaceName: String
-            switch self.layerColorSpace {
-            case CGColorSpaceCreateDeviceRGB(): layerColorSpaceName = "CGColorSpaceCreateDeviceRGB()"
-            case CGColorSpace(name: CGColorSpace.sRGB)!: layerColorSpaceName = "CGColorSpace(name: CGColorSpace.sRGB)"
-            default: layerColorSpaceName = "unknown"
-            }
-            
-            let layerPixelFormatName: String
-            switch self.layerPixelFormat {
-            case .bgra8Unorm: layerPixelFormatName = ".bgra8Unorm"
-            case .bgra8Unorm_srgb: layerPixelFormatName = ".bgra8Unorm_srgb"
-            default: layerPixelFormatName = "unknown"
-            }
-            
-            
-            return """
-                layerColorSpace: \(layerColorSpaceName),
-                layerPixelFormat: \(layerPixelFormatName),
-                textureColorSpace: \(self.textureColorSpace.rawValue)
-            """
-        }
     }
 
     // MARK: - IB
@@ -113,8 +90,6 @@ class ViewController: NSViewController {
                            pixelFormat: configuration.layerPixelFormat)
         self.textureManager = .init(context: self.context, colorSpace: configuration.textureColorSpace)
         self.renderer = try .init(context: self.context, pixelFormat: configuration.layerPixelFormat)
-        
-        print(configuration.description)
     }
 
     // MARK: - Draw

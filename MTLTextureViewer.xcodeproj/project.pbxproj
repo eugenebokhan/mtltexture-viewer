@@ -825,7 +825,7 @@
 			repositoryURL = "https://github.com/eugenebokhan/metal-tools.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.8;
+				version = 1.0.10;
 			};
 		};
 		18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */ = {
