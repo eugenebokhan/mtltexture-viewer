@@ -9,12 +9,12 @@ class Renderer {
 
     // MARK: - Init
 
-    public init(context: MTLContext) throws {
+    public init(context: MTLContext, pixelFormat: MTLPixelFormat) throws {
         let library = try context.library(for: Self.self)
         let renderStateDescriptor = MTLRenderPipelineDescriptor()
         renderStateDescriptor.vertexFunction = library.makeFunction(name: Self.vertexFuntionName)
         renderStateDescriptor.fragmentFunction = library.makeFunction(name: Self.fragmentFuntionName)
-        renderStateDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+        renderStateDescriptor.colorAttachments[0].pixelFormat = pixelFormat
         renderStateDescriptor.colorAttachments[0].isBlendingEnabled = false
         self.renderPipelineState = try context.device.makeRenderPipelineState(descriptor: renderStateDescriptor)
     }
@@ -54,14 +54,20 @@ class Renderer {
     private static let vertexFuntionName = "vertexFunction"
     private static let fragmentFuntionName = "fragmentFunction"
 
-    public static func configure(_ mtkView: MTKView,
-                                 with device: MTLDevice) {
+    public static func configure(
+        mtkView: MTKView,
+        device: MTLDevice,
+        colorspace: CGColorSpace,
+        pixelFormat: MTLPixelFormat
+    ) {
         mtkView.device = device
         mtkView.autoResizeDrawable = false
         mtkView.enableSetNeedsDisplay = true
         mtkView.isPaused = true
-        mtkView.clearColor = MTLClearColor(red: 0, green: 0,
-                                         blue: 0, alpha: 0)
+        mtkView.clearColor = .clear
         mtkView.layer?.isOpaque = false
+        
+        mtkView.colorspace = colorspace
+        mtkView.colorPixelFormat = pixelFormat
     }
 }

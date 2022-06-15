@@ -1,6 +1,11 @@
 import MetalTools
 
 class MTLTextureManager {
+    
+    enum ColorSpace: String {
+        case srgb
+        case rgb
+    }
 
     // MARK: - Type Definitions
 
@@ -27,10 +32,12 @@ class MTLTextureManager {
     let context: MTLContext
     let jsonDecoder = JSONDecoder()
     let jsonEncoder = JSONEncoder()
+    let colorSpace: ColorSpace
     var texture: MTLTexture?
 
-    init(context: MTLContext) {
+    init(context: MTLContext, colorSpace: ColorSpace) {
         self.context = context
+        self.colorSpace = colorSpace
     }
 
     // MARK: - Read / Write
@@ -50,8 +57,7 @@ class MTLTextureManager {
         case .jpg, .JPG, .png, .PNG, .heic, .HEIC:
             guard let cgImage = NSImage(contentsOf: url)?.cgImage
             else { throw Error.cgImageCreationFailed }
-            self.texture = try self.context.texture(from: cgImage)
-
+            self.texture = try self.context.texture(from: cgImage, srgb: self.colorSpace == .srgb)
         }
     }
 

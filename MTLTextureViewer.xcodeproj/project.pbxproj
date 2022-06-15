@@ -19,6 +19,9 @@
 		187162B723B102B400DBB54E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCD23AE12AA00365265 /* Renderer.swift */; };
 		187162B823B102B400DBB54E /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BCB23AD74EC00365265 /* NSImage+Extensions.swift */; };
 		187162B923B102BD00DBB54E /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A331123AFC5200091E7F8 /* CenteringClipView.swift */; };
+		18817C5F285128200079CAD5 /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18817C5E285128200079CAD5 /* MetalTools */; };
+		18817C612851288F0079CAD5 /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18817C602851288F0079CAD5 /* MetalTools */; };
+		188B749E285127B100173203 /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 188B749D285127B100173203 /* MetalTools */; };
 		18932791249628B000D86068 /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18932790249628B000D86068 /* QuickLookThumbnailing.framework */; };
 		18932792249628B000D86068 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A332523B0E0240091E7F8 /* Quartz.framework */; };
 		18932795249628B000D86068 /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932794249628B000D86068 /* ThumbnailProvider.swift */; };
@@ -33,10 +36,7 @@
 		189C25A12486E5E600C141A3 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C259F2486E43D00C141A3 /* Data+Compression.swift */; };
 		18AF004923AF80FE0013AFF1 /* BlurredWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004823AF80FE0013AFF1 /* BlurredWindow.swift */; };
 		18AF004B23AF811E0013AFF1 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004A23AF811E0013AFF1 /* BlurredView.swift */; };
-		18B020F02850021D00F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020EF2850021D00F22E0F /* MetalTools */; };
 		18B020F32850023500F22E0F /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F22850023500F22E0F /* SwiftMath */; };
-		18B020F52850026800F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F42850026800F22E0F /* MetalTools */; };
-		18B020F7285002B700F22E0F /* MetalTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F6285002B700F22E0F /* MetalTools */; };
 		18B020F92850034200F22E0F /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 18B020F82850034200F22E0F /* SwiftMath */; };
 		18B027B223B1BCF900A9D7AD /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
 		18B027B323B1BE0800A9D7AD /* MTLTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B123B1BCF900A9D7AD /* MTLTextureManager.swift */; };
@@ -45,6 +45,7 @@
 		18B027B623B1BF5300A9D7AD /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF004A23AF811E0013AFF1 /* BlurredView.swift */; };
 		18B027B923B1C9D100A9D7AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B823B1C9D100A9D7AD /* Utils.swift */; };
 		18B027BA23B1C9D100A9D7AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B027B823B1C9D100A9D7AD /* Utils.swift */; };
+		18C26AB72850F75C001BDE43 /* CoreVideoTools in Frameworks */ = {isa = PBXBuildFile; productRef = 18C26AB62850F75C001BDE43 /* CoreVideoTools */; };
 		18C78BB823AD628A00365265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BB723AD628A00365265 /* AppDelegate.swift */; };
 		18C78BBA23AD628A00365265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C78BB923AD628A00365265 /* ViewController.swift */; };
 		18C78BBC23AD628C00365265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C78BBB23AD628C00365265 /* Assets.xcassets */; };
@@ -125,8 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B020F7285002B700F22E0F /* MetalTools in Frameworks */,
 				187162A723B1025600DBB54E /* Quartz.framework in Frameworks */,
+				18817C612851288F0079CAD5 /* MetalTools in Frameworks */,
 				18B020F92850034200F22E0F /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18932791249628B000D86068 /* QuickLookThumbnailing.framework in Frameworks */,
-				18B020F52850026800F22E0F /* MetalTools in Frameworks */,
+				18817C5F285128200079CAD5 /* MetalTools in Frameworks */,
 				18932792249628B000D86068 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B020F32850023500F22E0F /* SwiftMath in Frameworks */,
-				18B020F02850021D00F22E0F /* MetalTools in Frameworks */,
+				188B749E285127B100173203 /* MetalTools in Frameworks */,
+				18C26AB72850F75C001BDE43 /* CoreVideoTools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +297,8 @@
 			);
 			name = QuickLookPreviewExtension;
 			packageProductDependencies = (
-				18B020F6285002B700F22E0F /* MetalTools */,
 				18B020F82850034200F22E0F /* SwiftMath */,
+				18817C602851288F0079CAD5 /* MetalTools */,
 			);
 			productName = QuickLookPreviewExtension;
 			productReference = 187162A623B1025600DBB54E /* QuickLookPreviewExtension.appex */;
@@ -316,7 +318,7 @@
 			);
 			name = ThumbnailExtension;
 			packageProductDependencies = (
-				18B020F42850026800F22E0F /* MetalTools */,
+				18817C5E285128200079CAD5 /* MetalTools */,
 			);
 			productName = ThumbnailExtension;
 			productReference = 1893278F249628B000D86068 /* ThumbnailExtension.appex */;
@@ -339,8 +341,9 @@
 			);
 			name = MTLTextureViewer;
 			packageProductDependencies = (
-				18B020EF2850021D00F22E0F /* MetalTools */,
 				18B020F22850023500F22E0F /* SwiftMath */,
+				18C26AB62850F75C001BDE43 /* CoreVideoTools */,
+				188B749D285127B100173203 /* MetalTools */,
 			);
 			productName = MTLTextureViewer;
 			productReference = 18C78BB423AD628A00365265 /* MTLTextureViewer.app */;
@@ -378,8 +381,9 @@
 			);
 			mainGroup = 18C78BAB23AD628A00365265;
 			packageReferences = (
-				18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */,
 				18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */,
+				18C26AB52850F75C001BDE43 /* XCRemoteSwiftPackageReference "core-video-tools" */,
+				188B749A2851278A00173203 /* XCRemoteSwiftPackageReference "metal-tools" */,
 			);
 			productRefGroup = 18C78BB523AD628A00365265 /* Products */;
 			projectDirPath = "";
@@ -816,12 +820,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */ = {
+		188B749A2851278A00173203 /* XCRemoteSwiftPackageReference "metal-tools" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:eugenebokhan/metal-tools.git";
+			repositoryURL = "https://github.com/eugenebokhan/metal-tools.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.6;
+				version = 1.0.10;
 			};
 		};
 		18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */ = {
@@ -832,12 +836,30 @@
 				version = 3.3.1;
 			};
 		};
+		18C26AB52850F75C001BDE43 /* XCRemoteSwiftPackageReference "core-video-tools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eugenebokhan/core-video-tools.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18B020EF2850021D00F22E0F /* MetalTools */ = {
+		18817C5E285128200079CAD5 /* MetalTools */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
+			package = 188B749A2851278A00173203 /* XCRemoteSwiftPackageReference "metal-tools" */;
+			productName = MetalTools;
+		};
+		18817C602851288F0079CAD5 /* MetalTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 188B749A2851278A00173203 /* XCRemoteSwiftPackageReference "metal-tools" */;
+			productName = MetalTools;
+		};
+		188B749D285127B100173203 /* MetalTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 188B749A2851278A00173203 /* XCRemoteSwiftPackageReference "metal-tools" */;
 			productName = MetalTools;
 		};
 		18B020F22850023500F22E0F /* SwiftMath */ = {
@@ -845,20 +867,15 @@
 			package = 18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */;
 			productName = SwiftMath;
 		};
-		18B020F42850026800F22E0F /* MetalTools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
-			productName = MetalTools;
-		};
-		18B020F6285002B700F22E0F /* MetalTools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18B020EE2850021D00F22E0F /* XCRemoteSwiftPackageReference "metal-tools" */;
-			productName = MetalTools;
-		};
 		18B020F82850034200F22E0F /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 18B020F12850023500F22E0F /* XCRemoteSwiftPackageReference "swiftmath" */;
 			productName = SwiftMath;
+		};
+		18C26AB62850F75C001BDE43 /* CoreVideoTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C26AB52850F75C001BDE43 /* XCRemoteSwiftPackageReference "core-video-tools" */;
+			productName = CoreVideoTools;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
