@@ -1,12 +1,13 @@
 {
+  "originHash" : "959449f5ebcb4b4aa75337cd37215f416c111162ae3c6766654bc6943e32171f",
   "pins" : [
     {
       "identity" : "core-video-tools",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eugenebokhan/core-video-tools.git",
       "state" : {
-        "revision" : "6028c5ec92a0611e205b3702c6dc0fbd120a26f4",
-        "version" : "0.0.5"
+        "revision" : "b6b76795e4cb5e22ed3bd6ed5650391093b1ede1",
+        "version" : "0.1.0"
       }
     },
     {
@@ -14,19 +15,28 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eugenebokhan/metal-tools.git",
       "state" : {
-        "revision" : "b7a53f2c169217a7207059071d64db23521de6ea",
-        "version" : "1.0.10"
+        "revision" : "a446cc45965c84b8acd201e182e9bed4e16f7fd0",
+        "version" : "1.3.0"
       }
     },
     {
-      "identity" : "swiftmath",
+      "identity" : "simd-tools",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftgfx/swiftmath.git",
+      "location" : "https://github.com/computer-graphics-tools/simd-tools.git",
       "state" : {
-        "revision" : "13a224a655cbef1ef0e39d7d22e31a4ff6bc9937",
-        "version" : "3.3.1"
+        "revision" : "9f7f2be245cff37244d39c22e815abec25bf09bb",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "303e5c5c36d6a558407d364878df131c3546fad8",
+        "version" : "510.0.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

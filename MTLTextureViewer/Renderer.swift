@@ -1,5 +1,5 @@
 import MetalTools
-import SwiftMath
+import SIMDTools
 
 class Renderer {
 
@@ -38,7 +38,7 @@ class Renderer {
                               .device
                               .makeSamplerState(descriptor: samplerDescriptor)
 
-            encoder.setVertexValue(transform, at: 0)
+            encoder.set(vertexValue: transform, at: 0)
             encoder.setFragmentTextures([texture])
             encoder.setFragmentSamplerState(sampler, index: 0)
 

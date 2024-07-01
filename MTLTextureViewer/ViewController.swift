@@ -1,6 +1,7 @@
 import Cocoa
 import MetalTools
-import SwiftMath
+import SIMDTools
+import simd
 import CoreVideoTools
 
 class ViewController: NSViewController {
@@ -21,7 +22,7 @@ class ViewController: NSViewController {
     var renderer: Renderer!
     var textureManager: MTLTextureManager!
 
-    var textureTransform: Matrix4x4f = .identity
+    var textureTransform: float4x4 = .identity
     var scale: Float = 1.0
     
     // MARK: - Life Cycle
@@ -53,15 +54,9 @@ class ViewController: NSViewController {
         self.scale *= scale
 
         self.textureTransform = self.textureTransform
-                              * .translate(tx: zoomPoint.x,
-                                           ty: zoomPoint.y,
-                                           tz: 0)
-                              * .scale(sx: scale,
-                                       sy: scale,
-                                       sz: 1)
-                              * .translate(tx: -(zoomPoint.x),
-                                           ty: -(zoomPoint.y),
-                                           tz: 0)
+                              * .translate(value: [zoomPoint.x, zoomPoint.y, 0])
+                              * .scale (value: [scale, scale, 1])
+                              * .translate(value: [-zoomPoint.x, -zoomPoint.y, 0])
         self.drawTexture()
     }
 
@@ -74,9 +69,7 @@ class ViewController: NSViewController {
                                                   in: view)
 
         self.textureTransform = self.textureTransform
-                              * .translate(tx: translation.x / self.scale,
-                                           ty: translation.y / self.scale,
-                                           tz: 0)
+                              * .translate(value: [translation.x / self.scale, translation.y / self.scale, 0])
         self.drawTexture()
     }
 
@@ -109,7 +102,7 @@ class ViewController: NSViewController {
 
         try? self.context.scheduleAndWait { commandBuffer in
             self.renderer.draw(texture: texture,
-                               with: .init(finalTransform),
+                               with: finalTransform,
                                on: self.mtkView,
                                in: commandBuffer)
         }
@@ -127,7 +120,7 @@ class ViewController: NSViewController {
         point *= 2               // convert
         point -= 1               // to metal
 
-        let result: SIMD4<Float> = simd_float4x4(self.textureTransform.inversed)
+        let result: SIMD4<Float> = self.textureTransform.inverse
                                  * .init(point.x, point.y, 0, 1)
         return .init(result.x,
                      result.y)
@@ -145,15 +138,13 @@ class ViewController: NSViewController {
     }
 
     func aspectRatioTransform(for texture: MTLTexture,
-                              in textureView: MTKView) -> Matrix4x4f {
+                              in textureView: MTKView) -> float4x4 {
         let textureAspectRatio: Float = .init(texture.width)
                                       / .init(texture.height)
         let textureViewAspectRatio: Float = .init(textureView.frame.width)
                                           / .init(textureView.frame.height)
         let scaleX = textureAspectRatio / textureViewAspectRatio
-        return .scale(sx: scaleX,
-                      sy: 1,
-                      sz: 1)
+        return .scale(value: [scaleX, 1, 1])
     }
 
 }
